@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.shopclues_clone.activities.CartEmpty;
 import com.example.shopclues_clone.activities.Notifications;
 import com.example.shopclues_clone.activities.SearchPageActivity;
 
