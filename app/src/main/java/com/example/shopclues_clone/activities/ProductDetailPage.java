@@ -6,11 +6,11 @@ import android.os.Bundle;
 
 import com.example.shopclues_clone.R;
 
-public class MainActivity extends AppCompatActivity {
+public class ProductDetailPage extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_product_detail_page2);
     }
 }
