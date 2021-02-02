@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">shopclues-clone</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="stay_home_and_explore_more">Stay Home And Explore More</string>
+    <string name="trending_searches">Trending Searches</string>
+    <string name="mobiles">Mobiles</string>
+    <string name="time_scale">Time Scale</string>
+    <string name="t_shirts">T-shirts</string>
+    <string name="headphones">Headphones</string>
+    <string name="shoes">Shoes</string>
+    <string name="sarees">Sarees</string>
+    <string name="shirts">Shirts</string>
+    <string name="watches">Watches</string>
+    <string name="trimmers">Trimmers</string>
+    <string name="bedsheets">Bedsheets</string>
 </resources>

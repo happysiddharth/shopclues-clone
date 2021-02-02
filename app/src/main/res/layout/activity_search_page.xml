@@ -1,9 +1,139 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.SearchPageActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <EditText
+        android:id="@+id/etStayHomeAndExplore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_baseline_arrow_back_24"
+        android:drawableLeft="@drawable/ic_baseline_arrow_back_24"
+        android:drawablePadding="@dimen/dp_20"
+        android:hint="@string/stay_home_and_explore_more"
+        android:padding="20dp"
+        android:textColorHint="@color/dark_grey" />
+
+    <TextView
+        android:id="@+id/tvTrendingSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etStayHomeAndExplore"
+        android:layout_margin="@dimen/dp_40"
+        android:text="@string/trending_searches"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/tvTimeScale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTrendingSearch"
+        android:layout_marginStart="@dimen/dp_40"
+        android:layout_marginLeft="@dimen/dp_40"
+        android:text="@string/time_scale"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/tvMobiles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTimeScale"
+        android:layout_marginStart="@dimen/dp_40"
+        android:layout_marginLeft="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_20"
+        android:text="@string/mobiles"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/tvTshirts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvMobiles"
+        android:layout_marginStart="@dimen/dp_40"
+        android:layout_marginLeft="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_20"
+        android:text="@string/t_shirts"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/tvHeadPhones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTshirts"
+        android:layout_marginStart="@dimen/dp_40"
+        android:layout_marginLeft="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_20"
+        android:text="@string/headphones"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/tvShoes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvHeadPhones"
+        android:layout_marginStart="@dimen/dp_40"
+        android:layout_marginLeft="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_20"
+        android:text="@string/shoes"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/tvSarees"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvShoes"
+        android:layout_marginStart="@dimen/dp_40"
+        android:layout_marginLeft="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_20"
+        android:text="@string/sarees"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/tvShirts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvSarees"
+        android:layout_marginStart="@dimen/dp_40"
+        android:layout_marginLeft="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_20"
+        android:text="@string/shirts"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/tvWatches"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvShirts"
+        android:layout_marginStart="@dimen/dp_40"
+        android:layout_marginLeft="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_20"
+        android:text="@string/watches"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/tvBedSheets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvWatches"
+        android:layout_marginStart="@dimen/dp_40"
+        android:layout_marginLeft="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_20"
+        android:text="@string/bedsheets"
+        android:textColor="@color/black" />
+
+
+    <TextView
+        android:id="@+id/tvTrimmers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvBedSheets"
+        android:layout_marginStart="@dimen/dp_40"
+        android:layout_marginLeft="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_20"
+        android:text="@string/trimmers"
+        android:textColor="@color/black" />
+
+</RelativeLayout>
