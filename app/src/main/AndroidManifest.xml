@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Shopcluesclone">
-        <activity android:name=".activities.SearchPageActivity"></activity>
+        <activity android:name=".activities.Notifications"></activity>
+        <activity android:name=".activities.SearchPageActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
