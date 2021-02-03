@@ -17,4 +17,10 @@
     <string name="notifications">Notifications</string>
     <string name="cart_empty">Cart Empty</string>
     <string name="continue_shopping">Continue Shopping</string>
+    <string name="how_does_it_work">How does it work ?</string>
+    <string name="invite_your_friends_to_register_on_shopclues">invite your friends to register on shopclues</string>
+    <string name="when_friend_register_on_app_both_of_you_will_get_700_worth_cluesbucks">when friend register on App,both of you will get 700 Worth CluesBucks+</string>
+    <string name="cluesbucks_can_be_used_on_your_next_order">CluesBucks+ can be used on your next order</string>
+    <string name="refer_now">REFER NOW</string>
+    <string name="refer_and_earn_leaders">Refer and Earn Leaders</string>
 </resources>

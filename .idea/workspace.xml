@@ -5,6 +5,9 @@
       <config />
     </shared>
   </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -25,9 +28,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0eece95c-54a5-4bc9-bdfa-2d21a23b1e11" name="Default Changelist" comment="Notifications">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/shopclues_clone/activities/CartEmpty.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/emptycart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_cart_empty.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/shopclues_clone/ViewHolder/LeaderViewHolder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/shopclues_clone/adapter/LeaderAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/shopclues_clone/fragments/ReferAndEarnFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/shopclues_clone/fragments/YourFriendFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/shopclues_clone/models/LeaderModelClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-v24/details.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-v24/plateneum.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-v24/rank.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-v24/tag.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-v24/weekly.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-v24/yourcurrentrank.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/earn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/mail.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/order.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/reedem.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/refer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_fragment_infalter.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_leader_board.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_refer_and_earn.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_your_friend.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/leaderboard_layout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
@@ -42,7 +63,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/shopclues_clone/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/shopclues_clone/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/shopclues_clone/fragments/RefralFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/shopclues_clone/fragments/LeaderBoardFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/shopclues_clone/models/RefralWinnerModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/dimen.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/dimen.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,7 +73,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[J7AAB760158636W]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -71,8 +94,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="valueResourceFile" />
+        <option value="Class" />
+        <option value="layoutResourceFile" />
       </list>
     </option>
   </component>
@@ -92,20 +116,24 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable-v24" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable-v24" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
   </component>
   <component name="RecentsManager">
     <key name="android.template.-2028728249">
       <recent name="com.example.shopclues_clone.activities" />
     </key>
+    <key name="android.template.-1216080901">
+      <recent name="com.example.shopclues_clone.activities" />
+    </key>
     <key name="android.template.1102141562">
       <recent name="com.example.shopclues_clone.activities" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\shopclues-clone\shopclues-clone\app\src\main\res\drawable" />
       <recent name="D:\shopclues-clone\shopclues-clone\app\src\main\res\drawable-v24" />
+      <recent name="D:\shopclues-clone\shopclues-clone\app\src\main\res\layout" />
+      <recent name="D:\shopclues-clone\shopclues-clone\app\src\main\res\drawable" />
     </key>
   </component>
   <component name="RunManager">
@@ -204,25 +232,61 @@
     <option name="LAST_COMMIT_MESSAGE" value="Notifications" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="446" y="57" key="#com.intellij.ide.util.MemberChooser" timestamp="1612316212366">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="446" y="57" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1612316212366" />
+    <state x="412" y="32" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1612314550741">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="412" y="32" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.680@0.0.1280.680" timestamp="1612314550741" />
+    <state x="371" y="88" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1612314792338">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="371" y="88" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1612314792338" />
     <state x="221" y="95" key="AndroidCreateResourceDirectoryDialog" timestamp="1612250314030">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="221" y="95" key="AndroidCreateResourceDirectoryDialog/0.0.1280.680@0.0.1280.680" timestamp="1612250314030" />
-    <state x="221" y="95" key="AndroidCreateResourceFileDialog" timestamp="1612253702302">
+    <state x="221" y="95" key="AndroidCreateResourceFileDialog" timestamp="1612313800306">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="221" y="95" key="AndroidCreateResourceFileDialog/0.0.1280.680@0.0.1280.680" timestamp="1612253702302" />
-    <state x="486" y="130" key="AndroidCreateXmlResourceDialog" timestamp="1612256253441">
+    <state x="221" y="95" key="AndroidCreateResourceFileDialog/0.0.1280.680@0.0.1280.680" timestamp="1612313800306" />
+    <state x="486" y="130" key="AndroidCreateXmlResourceDialog" timestamp="1612312634970">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="486" y="130" key="AndroidCreateXmlResourceDialog/0.0.1280.680@0.0.1280.680" timestamp="1612256253441" />
-    <state x="451" y="118" key="chooseDestDirectoryDialog" timestamp="1612255157538">
+    <state x="486" y="130" key="AndroidCreateXmlResourceDialog/0.0.1280.680@0.0.1280.680" timestamp="1612312634970" />
+    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1612311646018">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="451" y="118" key="chooseDestDirectoryDialog/0.0.1280.680@0.0.1280.680" timestamp="1612255157538" />
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1612254852378">
+    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1612311646018" />
+    <state width="1220" height="311" key="GridCell.Tab.0.bottom" timestamp="1612311658075">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1612254852378" />
+    <state width="1220" height="311" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1612311658075" />
+    <state width="1220" height="311" key="GridCell.Tab.0.center" timestamp="1612311658075">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1220" height="311" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1612311658075" />
+    <state width="1220" height="311" key="GridCell.Tab.0.left" timestamp="1612311658075">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1220" height="311" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1612311658075" />
+    <state width="1220" height="311" key="GridCell.Tab.0.right" timestamp="1612311658075">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1220" height="311" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1612311658075" />
+    <state x="451" y="118" key="chooseDestDirectoryDialog" timestamp="1612315433363">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="451" y="118" key="chooseDestDirectoryDialog/0.0.1280.680@0.0.1280.680" timestamp="1612315433363" />
+    <state x="298" y="151" width="672" height="677" key="run.anything.popup" timestamp="1612256894311">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="298" y="151" width="672" height="677" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1612256894311" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1612313052059">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1612313052059" />
   </component>
 </project>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragments.ReferAndEarnFragment">
+
+    <ImageView
+        android:id="@+id/ivReferAndEarn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/refer" />
+
+    <TextView
+        android:id="@+id/tvHow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/how_does_it_work"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_20"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvMail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        android:drawableStart="@drawable/mail"
+        android:drawableLeft="@drawable/mail"
+        android:drawablePadding="@dimen/dp_10"
+        android:padding="@dimen/dp_10"
+        android:text="@string/invite_your_friends_to_register_on_shopclues"
+        android:textSize="@dimen/sp_15" />
+
+
+    <TextView
+        android:id="@+id/tvEarn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        android:drawableStart="@drawable/earn"
+        android:drawableLeft="@drawable/mail"
+        android:drawablePadding="@dimen/dp_10"
+        android:padding="@dimen/dp_10"
+        android:text="@string/when_friend_register_on_app_both_of_you_will_get_700_worth_cluesbucks"
+        android:textSize="@dimen/sp_15" />
+
+    <TextView
+        android:id="@+id/tvOder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        android:drawableStart="@drawable/order"
+        android:drawableLeft="@drawable/mail"
+        android:drawablePadding="@dimen/dp_10"
+        android:padding="@dimen/dp_10"
+        android:text="@string/cluesbucks_can_be_used_on_your_next_order"
+        android:textSize="@dimen/sp_15" />
+
+    <Button
+        android:id="@+id/btnReferNow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        android:background="@color/orange"
+        android:text="@string/refer_now"
+        android:textColor="@color/white" />
+</LinearLayout>
