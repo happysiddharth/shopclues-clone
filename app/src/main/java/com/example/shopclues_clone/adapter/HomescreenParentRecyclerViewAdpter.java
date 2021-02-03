@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.shopclues_clone.R;
+import com.example.shopclues_clone.interfaces.CategoriesOnClickInterface;
 import com.example.shopclues_clone.models.HomescreenModel;
 
 import java.util.List;
@@ -22,9 +23,11 @@ public class HomescreenParentRecyclerViewAdpter extends RecyclerView.Adapter<Hom
     private RecyclerView.RecycledViewPool viewPool = new RecyclerView.RecycledViewPool();
     private List<HomescreenModel> list_parent;
     private String type;
+    private CategoriesOnClickInterface categoriesOnClickInterface;
 
-    public HomescreenParentRecyclerViewAdpter(List<HomescreenModel> list_parent) {
+    public HomescreenParentRecyclerViewAdpter(List<HomescreenModel> list_parent,CategoriesOnClickInterface categoriesOnClickInterface) {
         this.list_parent = list_parent;
+        this.categoriesOnClickInterface = categoriesOnClickInterface;
 
     }
 
@@ -47,7 +50,7 @@ public class HomescreenParentRecyclerViewAdpter extends RecyclerView.Adapter<Hom
 
         linearLayoutManager.setInitialPrefetchItemCount(parentItem.getChildernModels().size());
 
-        HomescreenChildernAdapter homescreenChildernAdapter = new HomescreenChildernAdapter(parentItem.getChildernModels(),parentItem.getType());
+        HomescreenChildernAdapter homescreenChildernAdapter = new HomescreenChildernAdapter(parentItem.getChildernModels(),parentItem.getType(),categoriesOnClickInterface);
         holder.ChildRecyclerView.setAdapter(homescreenChildernAdapter);
         if (HomescreenModel.BEST_BUY.equals(parentItem.getType())||HomescreenModel.GADGET_STORE.equals(parentItem.getType())){
             holder.ChildRecyclerView.setLayoutManager(gridLayoutManager);

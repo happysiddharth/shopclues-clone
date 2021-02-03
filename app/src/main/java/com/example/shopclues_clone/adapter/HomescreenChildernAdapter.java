@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.shopclues_clone.R;
+import com.example.shopclues_clone.interfaces.CategoriesOnClickInterface;
 import com.example.shopclues_clone.models.HomescreenChildernModel;
 import com.example.shopclues_clone.models.HomescreenModel;
 import com.synnapps.carouselview.CarouselView;
@@ -22,10 +23,12 @@ public class HomescreenChildernAdapter  extends RecyclerView
         .Adapter<RecyclerView.ViewHolder> {
     private List<HomescreenChildernModel> list_childerns;
     private String type;
+    private CategoriesOnClickInterface categoriesOnClickInterface;
 
-    public HomescreenChildernAdapter(List<HomescreenChildernModel> list_childerns,String type) {
+    public HomescreenChildernAdapter(List<HomescreenChildernModel> list_childerns,String type,CategoriesOnClickInterface categoriesOnClickInterface) {
         this.type = type;
         this.list_childerns = list_childerns;
+        this.categoriesOnClickInterface = categoriesOnClickInterface;
     }
 
     @NonNull
@@ -67,6 +70,12 @@ public class HomescreenChildernAdapter  extends RecyclerView
                 CategoriesViewHolder categoriesViewHolder = (CategoriesViewHolder)holder;
                 categoriesViewHolder.title.setText(childernModel.getTitle());
                 categoriesViewHolder.imageView.setImageResource(childernModel.getImage());
+                categoriesViewHolder.imageView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        categoriesOnClickInterface.redirectToPariticularActivity(childernModel.getCategory());
+                    }
+                });
                 break;
             case HomescreenModel.SALE_LABEL:
                 SaleCrouselViewHolder crouselViewHolder = (SaleCrouselViewHolder)holder;
@@ -109,6 +118,7 @@ public class HomescreenChildernAdapter  extends RecyclerView
             super(itemView);
             title = itemView.findViewById(R.id.catLabel);
             imageView = itemView.findViewById(R.id.imageCat);
+
         }
     }
     public class SaleViewHolder extends RecyclerView.ViewHolder {
