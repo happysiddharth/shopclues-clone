@@ -1,3 +1,32 @@
 <resources>
     <string name="app_name">shopclues-clone</string>
+    <string name="my_orders">My Orders</string>
+    <string name="wishlist">Wishlist</string>
+    <string name="vip_club">VIP Club</string>
+    <string name="my_goodybag">My Goodybag</string>
+    <string name="my_cluesbucks">My CluesBucks</string>
+    <string name="refer_earn"><![CDATA[Refer & Earn]]></string>
+    <string name="location">Location</string>
+    <string name="rate_your_purchase">Rate Your Purchase</string>
+    <string name="help_support"><![CDATA[Help & Support]]></string>
+    <string name="rate_the_app">Rate the App</string>
+    <string name="legal">Legal</string>
+    <string name="more">More</string>
+    <string name="my_profile">My Profile</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hi_guest">Hi Guest!</string>
+    <string name="sign_in_or_create_new_account_to_manage_your_orders">Sign in or Create New Account to Manage Your Orders</string>
+    <string name="sign_up">Sign up</string>
+    <string name="sign_in">Sign in</string>
+    <string name="enter_your_mobile_number_or_email_id">Enter your mobile number or email id</string>
+    <string name="login_via_otp">Login via OTP</string>
+    <string name="login_via_password">Login via Password</string>
+    <string name="facebook">Facebook</string>
+    <string name="truecaller">Truecaller</string>
+    <string name="login_with">Login with</string>
+    <string name="don_t_have_an_account_register_now">Don\'t have an account? Register Now</string>
+    <string name="enter_your_email_id">Enter your email ID</string>
+    <string name="enter_your_mobile_number">Enter your mobile number</string>
+    <string name="enter_your_password">Enter your password</string>
 </resources>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/custom_grey"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".fragments.AccountSignUpFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/hi_guest"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_22.1"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_20.1"
+        android:gravity="center"
+        android:text="@string/sign_in_or_create_new_account_to_manage_your_orders"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_16.1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_20.1"
+            android:layout_marginRight="@dimen/dp_20.1"
+            android:layout_weight="1"
+            app:cardCornerRadius="3dp">
+
+            <Button
+                android:id="@+id/btnSignIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:text="@string/sign_in"
+                android:textAllCaps="false"
+                android:textColor="@color/custom_grey"
+                android:textSize="@dimen/sp_16.1" />
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/btnSignUp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_20.1"
+            android:layout_marginRight="@dimen/dp_20.1"
+            android:layout_weight="1"
+            android:background="@drawable/rectangle_bg_offers"
+            android:text="@string/sign_up"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16.1" />
+
+    </LinearLayout>
+
+</LinearLayout>
