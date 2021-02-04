@@ -2,7 +2,12 @@ package com.example.shopclues_clone;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
+
+import com.example.shopclues_clone.activities.EditAddress;
+import com.example.shopclues_clone.activities.SelectPaymentActivity;
 
 public class MainActivity extends AppCompatActivity {
 
