@@ -27,6 +27,7 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 }
+def lottieVersion = "3.4.0"
 
 dependencies {
 
@@ -42,4 +43,5 @@ dependencies {
     implementation 'com.github.bumptech.glide:glide:4.11.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
     implementation 'com.google.code.gson:gson:2.8.6'
+    implementation "com.airbnb.android:lottie:$lottieVersion"
 }

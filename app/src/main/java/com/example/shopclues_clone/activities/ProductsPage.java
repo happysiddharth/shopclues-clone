@@ -7,6 +7,7 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -34,11 +35,20 @@ public class ProductsPage extends AppCompatActivity {
     private List<ProductResponse> list = new ArrayList<>();
     private ProductpageAdapter productpageAdapter;
     private String categories="";
+    private Button gotoCart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_products_page);
+        gotoCart = findViewById(R.id.button14);
+        gotoCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent goToCart = new Intent(getApplicationContext(),CartActivity.class);
+                startActivity(goToCart);
+            }
+        });
 
         if (getIntent().getExtras().containsKey("category")){
             categories = getIntent().getExtras().get("category").toString();

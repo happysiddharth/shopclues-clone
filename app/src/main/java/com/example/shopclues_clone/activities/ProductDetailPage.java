@@ -47,6 +47,7 @@ public class ProductDetailPage extends AppCompatActivity implements ProductClick
     private Button gotoCartBtn;
     private Button gotoCartBtn2;
     private Button backBtn;
+    private Button btnBuy;
     private RecyclerView recyclerView;
     private String categories;
     private List<ProductResponse> list = new ArrayList<>();
@@ -122,12 +123,28 @@ public class ProductDetailPage extends AppCompatActivity implements ProductClick
         gotoCartBtn = findViewById(R.id.gotoCartBtn);
         gotoCartBtn2 = findViewById(R.id.gotoCartBtn2);
         backBtn = findViewById(R.id.backBtn);
+        btnBuy = findViewById(R.id.button7);
         recyclerView = findViewById(R.id.rv);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext(),RecyclerView.HORIZONTAL,false);
         ProductpageAdapter productpageAdapter = new ProductpageAdapter(list,getApplicationContext(),this);
         recyclerView.setAdapter(productpageAdapter);
         recyclerView.setLayoutManager(linearLayoutManager);
+        gotoCartBtn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),CartActivity.class);
+                startActivity(intent);
+            }
+        });
 
+        btnBuy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                readCart();
+                Intent intent = new Intent(getApplicationContext(),AddAddressActivity.class);
+                startActivity(intent);
+            }
+        });
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -165,31 +182,61 @@ public class ProductDetailPage extends AppCompatActivity implements ProductClick
                        stringBuffer.append(c);
                        data = inputStreamReader.read();
                    }
-                   JSONArray jsonArray = new JSONArray(stringBuffer.toString());
-                   List<CartItemModel> cartItemModels = new ArrayList<>();
-                   for (int i=0;i<jsonArray.length();i++){
-                       JSONObject object = new JSONObject(jsonArray.get(i).toString());
-                       cartItemModels.add(new CartItemModel(object.get("id").toString(),1,object.get("user_id").toString()));
+                   Long tsLong = System.currentTimeMillis()/1000;
+                   String ts = tsLong.toString();
+                   if (!stringBuffer.toString().equals("")) {
+                       JSONArray jsonArray = new JSONArray(stringBuffer.toString());
+                       List<CartItemModel> cartItemModels = new ArrayList<>();
+                         Log.d("Sidd",jsonArray.length()+"");
+                       for (int i = 0; i < jsonArray.length(); i++) {
+                           JSONObject object = new JSONObject(jsonArray.get(i).toString());
+                           cartItemModels.add(new CartItemModel(object.get("id").toString(), 1, object.get("user_id").toString(), object.get("title").toString(), object.get("image").toString(),object.get("price").toString(), object.get("cart_id").toString()));
+                       }
+
+                       cartItemModels.add(new CartItemModel(id, 1, "id", response_main.getTitle(), response_main.getImage(),response_main.getPrice().toString(),ts));
+
+
+                       FileOutputStream fileOutputStream = new FileOutputStream(file, false);
+                       OutputStreamWriter outputStreamWriter = new OutputStreamWriter(fileOutputStream);
+                       Gson gson = new GsonBuilder().setPrettyPrinting().create();
+                       String g = gson.toJson(cartItemModels);
+                       outputStreamWriter.append(g);
+                       outputStreamWriter.close();
+                       runOnUiThread(new Runnable() {
+                           @Override
+                           public void run() {
+                               gotoCartBtn.setText((jsonArray.length()+1)+"");
+                               gotoCartBtn2.setVisibility(View.VISIBLE);
+                               addToCarTBtn.setVisibility(View.GONE);
+                           }
+                       });
+                   }else{
+
+                       List<CartItemModel> cartItemModels = new ArrayList<>();
+
+
+                       cartItemModels.add(new CartItemModel(id, 1, "id", response_main.getTitle(), response_main.getImage(),response_main.getPrice().toString(),ts));
+
+
+                       FileOutputStream fileOutputStream = new FileOutputStream(file, false);
+                       OutputStreamWriter outputStreamWriter = new OutputStreamWriter(fileOutputStream);
+                       Gson gson = new GsonBuilder().setPrettyPrinting().create();
+                       String g = gson.toJson(cartItemModels);
+                       outputStreamWriter.append(g);
+                       outputStreamWriter.close();
+                       runOnUiThread(new Runnable() {
+                           @Override
+                           public void run() {
+                               gotoCartBtn.setText((1)+"");
+                               gotoCartBtn2.setVisibility(View.VISIBLE);
+                               addToCarTBtn.setVisibility(View.GONE);
+                           }
+                       });
+
                    }
-
-                   cartItemModels.add(new CartItemModel("id",1,"id"));
-
                    inputStreamReader.close();
 
-                   FileOutputStream fileOutputStream = new FileOutputStream(file,false);
-                   OutputStreamWriter outputStreamWriter = new OutputStreamWriter(fileOutputStream);
-                   Gson gson = new GsonBuilder().setPrettyPrinting().create();
-                   String g = gson.toJson(cartItemModels);
-                   outputStreamWriter.append(g);
-                   outputStreamWriter.close();
-                   runOnUiThread(new Runnable() {
-                       @Override
-                       public void run() {
-                           gotoCartBtn.setText((jsonArray.length()+1)+"");
-                           gotoCartBtn2.setVisibility(View.VISIBLE);
-                           addToCarTBtn.setVisibility(View.GONE);
-                       }
-                   });
+
                }catch (Exception e){
 
                }

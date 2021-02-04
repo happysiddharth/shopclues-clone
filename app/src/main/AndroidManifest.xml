@@ -11,7 +11,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Shopcluesclone">
-        <activity android:name=".activities.ProvideAddressActivity"></activity>
+        <activity android:name=".activities.MyOrdersActivity"></activity>
+        <activity android:name=".activities.CartActivity" />
+        <activity android:name=".activities.CongratulationActivity" />
+        <activity android:name=".activities.EnterOtpActivity" />
+        <activity android:name=".activities.EnterPhoneNumberActivity" />
+        <activity android:name=".activities.CheckoutActitivity" />
+        <activity android:name=".activities.AddAddressActivity" />
+        <activity android:name=".activities.ProvideAddressActivity" />
 
         <service
             android:name=".services.ReadProductFromAssetsService"
