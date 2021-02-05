@@ -15,4 +15,6 @@
     <color name="neon_orange">#FF6700</color>
     <color name="red">#FF0000</color>
     <color name="faded_white">#FAF0E6</color>
+    <color name="seach_et">#EEEEEE</color>
+    <color name="trans">#00EEEEEE</color>
 </resources>

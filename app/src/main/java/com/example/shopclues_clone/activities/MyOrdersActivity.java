@@ -14,8 +14,10 @@ import android.widget.Button;
 import com.example.shopclues_clone.R;
 import com.example.shopclues_clone.adapter.MyOrderAdapter;
 import com.example.shopclues_clone.interfaces.CancelOrder;
+import com.example.shopclues_clone.interfaces.OpenBottomSheet;
 import com.example.shopclues_clone.models.CartItemModel;
 import com.example.shopclues_clone.models.OrderModel;
+import com.example.shopclues_clone.utils.MyOrderBottomSheet;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -33,7 +35,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.function.Consumer;
 
-public class MyOrdersActivity extends AppCompatActivity implements CancelOrder {
+public class MyOrdersActivity extends AppCompatActivity implements CancelOrder, OpenBottomSheet {
     private RecyclerView recyclerView;
     private List<OrderModel> list = new ArrayList<>();
     private MyOrderAdapter adapter;
@@ -94,7 +96,7 @@ public class MyOrdersActivity extends AppCompatActivity implements CancelOrder {
     }
 
     private void setRecyclerViewAdapter() {
-        adapter = new MyOrderAdapter(list,this);
+        adapter = new MyOrderAdapter(list,this,this);
         LinearLayoutManager linearLayoutManager= new LinearLayoutManager(this);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(linearLayoutManager);
@@ -140,5 +142,12 @@ public class MyOrdersActivity extends AppCompatActivity implements CancelOrder {
        adapter.notifyItemChanged(position);
        Thread thread = new Thread(runnable1);
        thread.start();
+    }
+
+    @Override
+    public void openInterFace(OrderModel orderModel) {
+
+                MyOrderBottomSheet bottomSheet = new MyOrderBottomSheet(orderModel);
+                bottomSheet.show(getSupportFragmentManager(), "exampleBottomSheet");
     }
 }

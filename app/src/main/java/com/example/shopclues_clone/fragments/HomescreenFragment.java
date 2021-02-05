@@ -82,6 +82,7 @@ public class HomescreenFragment extends Fragment implements CategoriesOnClickInt
 
         list.add(categories);
         list.add(sponsor);
+
         list.add(sale);
         list.add(best_buys);
         list.add(sponsor2);

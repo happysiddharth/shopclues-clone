@@ -11,6 +11,8 @@ import android.content.Intent;
 import android.icu.math.BigDecimal;
 import android.os.Build;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
@@ -48,7 +50,8 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity implements BottomNavigationToggle {
     private FrameLayout frameLayout ;
     private NavigationView navDrawer;
-    private Button gotocart;
+    private Button gotocart,search_btn;
+    private EditText search_text;
     private BottomNavigationView bottomNavigationView ;
     private EditText pinCodeEditText;
     private FragmentManager fragmentManager = getSupportFragmentManager();
@@ -126,6 +129,40 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationT
         bottomNavigationView = findViewById(R.id.bottomNavigation);
         pinCodeEditText = findViewById(R.id.editTextTextPersonName);
         gotocart = findViewById(R.id.button2);
+        search_btn = findViewById(R.id.button21);
+        search_text = findViewById(R.id.editTextTextPersonName2);
+        search_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent search_page = new Intent(getApplicationContext(),SearchActivity.class);
+                if (!search_text.getText().toString().isEmpty())
+                {
+                    search_page.putExtra("query",search_text.getText().toString());
+                    startActivity(search_page);
+                }
+            }
+        });
+        search_text.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if (!s.toString().isEmpty()){
+                    search_text.setBackground(getDrawable(R.color.seach_et));
+                }else{
+                    search_text.setBackground(getDrawable(R.color.trans));
+
+                }
+            }
+        });
         gotocart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

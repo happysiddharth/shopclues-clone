@@ -16,6 +16,7 @@ import com.airbnb.lottie.L;
 import com.bumptech.glide.Glide;
 import com.example.shopclues_clone.R;
 import com.example.shopclues_clone.interfaces.CancelOrder;
+import com.example.shopclues_clone.interfaces.OpenBottomSheet;
 import com.example.shopclues_clone.models.OrderModel;
 
 import java.util.List;
@@ -23,10 +24,13 @@ import java.util.List;
 public class MyOrderAdapter extends RecyclerView.Adapter<MyOrderAdapter.MyOrderViewHolder> {
     List<OrderModel> list;
     private CancelOrder cancelOrder;
+    private OpenBottomSheet openBottomSheet;
 
-    public MyOrderAdapter(List<OrderModel> list,CancelOrder cancelOrder) {
+    public MyOrderAdapter(List<OrderModel> list,CancelOrder cancelOrder,OpenBottomSheet openBottomSheet) {
         this.list = list;
         this.cancelOrder = cancelOrder;
+        this.openBottomSheet = openBottomSheet;
+
     }
 
     @NonNull
@@ -73,6 +77,12 @@ public class MyOrderAdapter extends RecyclerView.Adapter<MyOrderAdapter.MyOrderV
             name.setText(orderModel.getCartItemModel().getTitle());
             price.setText(orderModel.getCartItemModel().getPrice());
             payment_type.setText(orderModel.getPayment_type());
+            image.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    openBottomSheet.openInterFace(orderModel);
+                }
+            });
             if (orderModel.getTime_of_order()!=null){
                 time.setText(orderModel.getTime_of_order());
             }

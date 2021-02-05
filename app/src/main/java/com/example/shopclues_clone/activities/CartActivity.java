@@ -86,6 +86,7 @@ public class CartActivity extends AppCompatActivity implements RemoveCartItem {
                     cart_total = BigDecimal.valueOf(cart_total).setScale(3, 5)
                             .doubleValue();
                 }
+
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
@@ -122,10 +123,26 @@ public class CartActivity extends AppCompatActivity implements RemoveCartItem {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cart);
+        Log.d("Sidd","onStart");
         init();
+        Log.d("Sidd","onStart2");
         Thread thread = new Thread(runnable);
         thread.start();
+
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+    }
+
     private void init() {
         recyclerView = findViewById(R.id.rv);
         checkoutTotal = findViewById(R.id.textView4);
