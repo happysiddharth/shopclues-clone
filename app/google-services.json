@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "501238814751",
+    "project_id": "shopcluesclone",
+    "storage_bucket": "shopcluesclone.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:501238814751:android:90d16a2d3f16f5579fdd2a",
+        "android_client_info": {
+          "package_name": "com.example.shopclues_clone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "501238814751-9ki07qis9981uejk5hr1oq0au131fjmh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDX5Z8WT3Jy9UxktO-XKtqVtP3LjKBcx9U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "501238814751-9ki07qis9981uejk5hr1oq0au131fjmh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

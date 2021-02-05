@@ -1,4 +1,4 @@
-package com.example.shopclues_clone;
+package com.example.shopclues_clone.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,9 +18,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 
-import com.example.shopclues_clone.activities.CartActivity;
-import com.example.shopclues_clone.activities.ProductsPage;
-import com.example.shopclues_clone.adapter.CheckoutAdapter;
+
+import com.example.shopclues_clone.fragments.AccountFragement;
 import com.example.shopclues_clone.fragments.HomescreenFragment;
 import com.example.shopclues_clone.fragments.ProductsFragment;
 import com.example.shopclues_clone.fragments.TestingFragment;
@@ -29,6 +28,9 @@ import com.example.shopclues_clone.models.CartItemModel;
 import com.example.shopclues_clone.models.ProductResponse;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
+import com.example.shopclues_clone.R;
+
+import java.io.File;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -42,6 +44,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class MainActivity extends AppCompatActivity implements BottomNavigationToggle {
     private FrameLayout frameLayout ;
     private NavigationView navDrawer;
@@ -54,7 +57,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationT
         public void run() {
             Log.d("Sidd","run");
             try {
-                File folder = new File(getFilesDir()+File.separator,"data");
+                File folder = new File(getFilesDir()+ File.separator,"data");
                 if (!folder.exists()){
                     folder.mkdir();
                 }
@@ -137,7 +140,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationT
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()){
                     case R.id.action_account:
-                        setFrameLayout(new TestingFragment());
+
+                        setFrameLayout(new AccountFragement());
                        break;
                     case R.id.action_recents:
                         Log.d("Sidd","home");

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin=".1dp"
+    android:background="@drawable/rectangle_bg_offers">
+
+
+    <RelativeLayout
+        android:id="@+id/rlProduct"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_330.1"
+        android:paddingLeft="@dimen/dp_7.1">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvLike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/dp_7.1"
+            android:innerRadius="0dp"
+            android:shape="ring"
+            app:cardCornerRadius="@dimen/dp_20.1">
+
+            <ImageView
+                android:layout_width="@dimen/dp_40.2"
+                android:layout_height="@dimen/dp_40.2"
+                android:layout_gravity="center"
+                android:padding="@dimen/dp_10.1"
+                android:src="@drawable/ic_heart" />
+
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/ivProduct"
+            android:layout_width="100.1dp"
+            android:layout_height="140.1dp"
+            android:layout_below="@id/cvLike"
+            android:layout_centerInParent="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/t_shirt" />
+
+        <TextView
+            android:id="@+id/tvProductName"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_20.1"
+            android:layout_below="@id/ivProduct"
+            android:layout_marginTop="@dimen/dp_10.1"
+            android:text="Odoky Men Black Round Neck T-shirt"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_16.1" />
+
+        <TextView
+            android:id="@+id/tvProductPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvProductName"
+            android:layout_marginTop="@dimen/dp_7.1"
+            android:drawableLeft="@drawable/ic_rupee_indian_golden"
+            android:text="171"
+            android:textColor="@color/golden"
+            android:textSize="@dimen/sp_16.1"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvPriceBefore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvProductName"
+            android:layout_marginLeft="@dimen/dp_7.1"
+            android:layout_marginTop="@dimen/dp_7.1"
+            android:layout_toRightOf="@id/tvProductPrice"
+            android:foreground="@drawable/strike_through"
+            android:text="499"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:drawableLeftCompat="@drawable/ic_rupee_indian_black" />
+
+        <TextView
+            android:id="@+id/tvOff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvProductName"
+            android:layout_marginLeft="@dimen/dp_7.1"
+            android:layout_marginTop="@dimen/dp_7.1"
+            android:layout_toRightOf="@id/tvPriceBefore"
+            android:text="65% off"
+            android:textColor="@color/custom_grey" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            style="@android:attr/ratingBarStyleSmall"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvOff"
+            android:isIndicator="true"
+            android:numStars="4"
+            android:scaleX=".4"
+            android:scaleY=".4"/>
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

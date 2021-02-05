@@ -9,4 +9,10 @@
     <color name="white">#FFFFFFFF</color>
     <color name="gray">#8A8A8A</color>
     <color name="orange">#FF685E</color>
+    <color name="custom_grey">#24A3B5</color>
+    <color name="golden">#FFD700</color>
+    <color name="dim_grey">#696969</color>
+    <color name="neon_orange">#FF6700</color>
+    <color name="red">#FF0000</color>
+    <color name="faded_white">#FAF0E6</color>
 </resources>

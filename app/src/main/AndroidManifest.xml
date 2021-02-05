@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Shopcluesclone">
-        <activity android:name=".activities.MyOrdersActivity"></activity>
+
+        <activity android:name=".activities.MyOrdersActivity"/>
         <activity android:name=".activities.CartActivity" />
         <activity android:name=".activities.CongratulationActivity" />
         <activity android:name=".activities.EnterOtpActivity" />
@@ -26,7 +27,12 @@
 
         <activity android:name=".activities.ProductDetailPage" />
         <activity android:name=".activities.ProductsPage" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".activities.AccountsActivity"/>
+
+        <activity android:name=".activities.SignUpActivity"/>
+        <activity android:name=".activities.OffersActivity" />
+        <activity android:name=".activities.GoogleLoginActivity" />
+        <activity android:name=".activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

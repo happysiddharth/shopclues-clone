@@ -121,6 +121,13 @@ public class ProductDetailPage extends AppCompatActivity implements ProductClick
         price = findViewById(R.id.productPrice);
         addToCarTBtn = findViewById(R.id.addToCarTBtn);
         gotoCartBtn = findViewById(R.id.gotoCartBtn);
+        gotoCartBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),CartActivity.class);
+                startActivity(intent);
+            }
+        });
         gotoCartBtn2 = findViewById(R.id.gotoCartBtn2);
         backBtn = findViewById(R.id.backBtn);
         btnBuy = findViewById(R.id.button7);
