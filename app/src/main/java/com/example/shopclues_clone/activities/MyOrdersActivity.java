@@ -5,11 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import com.example.shopclues_clone.R;
 import com.example.shopclues_clone.adapter.MyOrderAdapter;
@@ -39,6 +41,7 @@ public class MyOrdersActivity extends AppCompatActivity implements CancelOrder, 
     private RecyclerView recyclerView;
     private List<OrderModel> list = new ArrayList<>();
     private MyOrderAdapter adapter;
+    private ImageView home;
     private Button backBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -105,6 +108,14 @@ public class MyOrdersActivity extends AppCompatActivity implements CancelOrder, 
     private void init() {
         recyclerView = findViewById(R.id.rv);
         backBtn = findViewById(R.id.button16);
+        home = findViewById(R.id.imageView18);
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(intent);
+            }
+        });
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
