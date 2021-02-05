@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.example.shopclues_clone.R;
 import com.example.shopclues_clone.adapter.CheckoutAdapter;
 import com.example.shopclues_clone.interfaces.RemoveCartItem;
@@ -38,7 +39,8 @@ import java.util.function.Predicate;
 public class CartActivity extends AppCompatActivity implements RemoveCartItem {
     private RecyclerView recyclerView;
     private LinearLayout linearLayout;
-    private Button nextBtn;
+    private Button nextBtn,continue_shoping;
+    private LottieAnimationView lottieAnimationView;
     private TextView checkoutTotal,discount_amount,pricetotal,payableAmount,remove;
     private CheckoutAdapter checkoutAdapter;
     private Map<Integer, Map<Integer, CartItemModel>> response = new HashMap<>();
@@ -87,17 +89,27 @@ public class CartActivity extends AppCompatActivity implements RemoveCartItem {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
+                        if (list.size()>0){
+                            checkoutTotal.setText(cart_total+"");
+                            discount_amount.setText(discount+"");
+                            pricetotal.setText(cart_total+"");
+                            payableAmount.setText((cart_total-discount)+"");
 
-                        checkoutTotal.setText(cart_total+"");
-                        discount_amount.setText(discount+"");
-                        pricetotal.setText(cart_total+"");
-                        payableAmount.setText((cart_total-discount)+"");
+                            LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext());
+                            checkoutAdapter = new CheckoutAdapter(list,CartActivity.this);
 
-                        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext());
-                        checkoutAdapter = new CheckoutAdapter(list,CartActivity.this);
+                            recyclerView.setLayoutManager(linearLayoutManager);
+                            recyclerView.setAdapter(checkoutAdapter);
+                        }else{
 
-                        recyclerView.setLayoutManager(linearLayoutManager);
-                        recyclerView.setAdapter(checkoutAdapter);
+                            nextBtn.setVisibility(View.GONE);
+                            recyclerView.setVisibility(View.GONE);
+                            continue_shoping.setVisibility(View.VISIBLE);
+                            linearLayout.setVisibility(View.GONE);
+                            lottieAnimationView.setVisibility(View.VISIBLE);
+                        }
+
+
                     }
                 });
             }catch (Exception r){
@@ -120,6 +132,14 @@ public class CartActivity extends AppCompatActivity implements RemoveCartItem {
         //discount_amount,pricetotal,payableAmount
         linearLayout = findViewById(R.id.ll);
         nextBtn = findViewById(R.id.button9);
+        continue_shoping = findViewById(R.id.button19);
+        lottieAnimationView = findViewById(R.id.animationView);
+        continue_shoping.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         pricetotal = findViewById(R.id.priceTotal);
         discount_amount = findViewById(R.id.discountAmount);
@@ -159,7 +179,11 @@ public class CartActivity extends AppCompatActivity implements RemoveCartItem {
                 }
             });thread.start();
             if (list.size()==0){
+                nextBtn.setVisibility(View.GONE);
+                recyclerView.setVisibility(View.GONE);
+                continue_shoping.setVisibility(View.VISIBLE);
                 linearLayout.setVisibility(View.GONE);
+                lottieAnimationView.setVisibility(View.VISIBLE);
 
             }
             checkoutAdapter.notifyDataSetChanged();

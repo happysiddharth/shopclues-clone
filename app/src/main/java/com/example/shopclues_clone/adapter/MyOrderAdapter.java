@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.airbnb.lottie.L;
@@ -48,8 +49,9 @@ public class MyOrderAdapter extends RecyclerView.Adapter<MyOrderAdapter.MyOrderV
 
     class MyOrderViewHolder extends RecyclerView.ViewHolder{
         private ImageView image;
-        private TextView name,quantity,time,price,status;
+        private TextView name,quantity,time,price,status,payment_type;
         private Button cancel_order;
+        private ConstraintLayout constraintLayout;
 
         public MyOrderViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -61,14 +63,19 @@ public class MyOrderAdapter extends RecyclerView.Adapter<MyOrderAdapter.MyOrderV
             price = itemView.findViewById(R.id.textView6);
             name = itemView.findViewById(R.id.textView7);
             time = itemView.findViewById(R.id.textView8);
+            payment_type = itemView.findViewById(R.id.textView12);
             status = itemView.findViewById(R.id.textView9);
             cancel_order = itemView.findViewById(R.id.button15);
+            constraintLayout = itemView.findViewById(R.id.orderConstaintLayout);
         }
         private void SetData(OrderModel orderModel,int pos){
             Glide.with(image).load(orderModel.getCartItemModel().getImage()).into(image);
             name.setText(orderModel.getCartItemModel().getTitle());
             price.setText(orderModel.getCartItemModel().getPrice());
-            time.setText("12");
+            payment_type.setText(orderModel.getPayment_type());
+            if (orderModel.getTime_of_order()!=null){
+                time.setText(orderModel.getTime_of_order());
+            }
             if (orderModel.getOrder_status()!=null&&orderModel.getOrder_status().equals(OrderModel.STATUS_CANCELED)){
                 cancel_order.setText("Canceled");
                 cancel_order.setBackground(cancel_order.getContext().getDrawable(R.color.gray));

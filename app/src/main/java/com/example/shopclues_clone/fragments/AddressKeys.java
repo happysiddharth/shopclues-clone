@@ -8,4 +8,5 @@ public class AddressKeys {
     public static final String AREA_CODE = "area_code";
     public static final String CITY = "city";
     public static final String STATE = "state";
+    public static final String PAYMENT_TYPE =  "payment_type";
 }

@@ -30,7 +30,11 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 public class EnterOtpActivity extends AppCompatActivity {
@@ -38,7 +42,7 @@ public class EnterOtpActivity extends AppCompatActivity {
     private EditText otp;
     private String OTP = "1234";
     private String number  = "";
-    private String pincode,fullname,phonenumber,flatno,area_code,city,state;
+    private String pincode,fullname,phonenumber,flatno,area_code,city,state,payment_type;
 
     private Runnable runnable = new Runnable() {
         @Override
@@ -75,12 +79,19 @@ public class EnterOtpActivity extends AppCompatActivity {
 
 
                     List<OrderModel> list_of_order = new ArrayList<>();
+                    Calendar cal = Calendar.getInstance();
+                    Date currentLocalTime = cal.getTime();
 
+                    DateFormat date = new SimpleDateFormat("dd-MM-yyy HH:mm");
+
+                    String localTime = date.format(currentLocalTime);
+
+                    System.out.println(localTime);
                     for (int i=0;i<cartItemModels.size();i++){
                         Long tsLong = (System.currentTimeMillis()+1)/1000;
                         String ts = tsLong.toString();
                         JSONObject cartItemModel = new JSONObject(jsonArray.get(i).toString());
-                        list_of_order.add(new OrderModel(ts,"1",getIntent().getExtras().get("data").toString(),OrderModel.STATUS_PENDING,
+                        list_of_order.add(new OrderModel(ts,"1",getIntent().getExtras().get("data").toString(),OrderModel.STATUS_PENDING,payment_type,localTime,
                                 new AddressModel(phonenumber,pincode,flatno,area_code,area_code,city,"state",state),
                                 cartItemModels.get(i)));
                     }
@@ -172,6 +183,9 @@ public class EnterOtpActivity extends AppCompatActivity {
             }
             if (!getIntent().getExtras().get(AddressKeys.STATE).toString().equals("")){
                 state = getIntent().getExtras().get(AddressKeys.STATE).toString();
+            }
+            if (!getIntent().getExtras().get(AddressKeys.PAYMENT_TYPE).toString().equals("")){
+                payment_type = getIntent().getExtras().get(AddressKeys.PAYMENT_TYPE).toString();
             }
         }
         SharedPreferences.getsharePreferences(getApplicationContext());

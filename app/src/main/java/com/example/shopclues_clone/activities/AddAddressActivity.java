@@ -28,8 +28,9 @@ import java.util.List;
 import java.util.Map;
 
 public class AddAddressActivity extends AppCompatActivity {
+
     private EditText pincode,fullname,phonenumber,flatno,areacode,city,state;
-    private Button continueBtn;
+    private Button continueBtn,backbutton;
     private Map<Integer,ProductDetailPage> map_product = new HashMap<>();
     private List<ProductResponse> list =  new ArrayList<>();
 
@@ -50,6 +51,13 @@ public class AddAddressActivity extends AppCompatActivity {
         city = findViewById(R.id.etCity);
         state = findViewById(R.id.etState);
         continueBtn = findViewById(R.id.Btncontinue);
+        backbutton = findViewById(R.id.button17);
+        backbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         continueBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -164,7 +164,7 @@ public class CheckoutActitivity extends AppCompatActivity implements RemoveCartI
         nextBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),EnterPhoneNumberActivity.class);
+                Intent intent = new Intent(getApplicationContext(),PaymentPage.class);
                 intent.putExtra(AddressKeys.PIN_CODE,pincode);
                 intent.putExtra(AddressKeys.FULL_NAME,fullname);
                 intent.putExtra(AddressKeys.PHONE_NUMBER,phonenumber);

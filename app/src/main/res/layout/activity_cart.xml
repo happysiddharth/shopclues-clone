@@ -95,6 +95,19 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="634dp" />
 
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/guideline20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView11"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_url="https://assets9.lottiefiles.com/packages/lf20_dkc8tvbm.json" />
+
     <Button
         android:layout_margin="15dp"
         android:background="@color/orange"
@@ -191,5 +204,19 @@
 
         </LinearLayout>
     </LinearLayout>
+
+    <Button
+        android:id="@+id/button19"
+        android:layout_width="362dp"
+        android:layout_height="49dp"
+        android:background="@color/orange"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:text="Continue shoping"
+        app:layout_constraintBottom_toBottomOf="@+id/button9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline21" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

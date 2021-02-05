@@ -11,15 +11,14 @@ import android.widget.EditText;
 import com.example.shopclues_clone.R;
 import com.example.shopclues_clone.fragments.AddressKeys;
 
-public class EnterPhoneNumberActivity extends AppCompatActivity {
+public class PaymentPage extends AppCompatActivity {
     private Button nextPage;
     private EditText number;
-    private String pincode,fullname,phonenumber,flatno,area_code,city,state,payment_type;
-
+    private String pincode,fullname,phonenumber,flatno,area_code,city,state;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_enter_phone_number);
+        setContentView(R.layout.activity_payment_page);
         if (getIntent()!=null){
             if (!getIntent().getExtras().get(AddressKeys.PIN_CODE).toString().equals("")){
                 pincode = getIntent().getExtras().get(AddressKeys.PIN_CODE).toString();
@@ -42,17 +41,12 @@ public class EnterPhoneNumberActivity extends AppCompatActivity {
             if (!getIntent().getExtras().get(AddressKeys.STATE).toString().equals("")){
                 state = getIntent().getExtras().get(AddressKeys.STATE).toString();
             }
-            if (!getIntent().getExtras().get(AddressKeys.PAYMENT_TYPE).toString().equals("")){
-                payment_type = getIntent().getExtras().get(AddressKeys.PAYMENT_TYPE).toString();
-            }
         }
-        nextPage = findViewById(R.id.button10);
-        number = findViewById(R.id.editTextPhone);
+        nextPage = findViewById(R.id.button18);
         nextPage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),EnterOtpActivity.class);
-                intent.putExtra("data",number.getText().toString());
+                Intent intent = new Intent(getApplicationContext(),EnterPhoneNumberActivity.class);
                 intent.putExtra(AddressKeys.PIN_CODE,pincode);
                 intent.putExtra(AddressKeys.FULL_NAME,fullname);
                 intent.putExtra(AddressKeys.PHONE_NUMBER,phonenumber);
@@ -60,7 +54,7 @@ public class EnterPhoneNumberActivity extends AppCompatActivity {
                 intent.putExtra(AddressKeys.AREA_CODE,area_code);
                 intent.putExtra(AddressKeys.CITY,city);
                 intent.putExtra(AddressKeys.STATE,state);
-                intent.putExtra(AddressKeys.PAYMENT_TYPE,payment_type);
+                intent.putExtra(AddressKeys.PAYMENT_TYPE,"cod");
                 startActivity(intent);
             }
         });
