@@ -28,6 +28,7 @@ import com.example.shopclues_clone.interfaces.BottomNavigationToggle;
 import com.example.shopclues_clone.models.CartItemModel;
 import com.example.shopclues_clone.models.ProductResponse;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -43,6 +44,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationToggle {
     private FrameLayout frameLayout ;
+    private NavigationView navDrawer;
     private Button gotocart;
     private BottomNavigationView bottomNavigationView ;
     private EditText pinCodeEditText;

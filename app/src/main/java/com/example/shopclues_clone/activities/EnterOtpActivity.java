@@ -103,8 +103,8 @@ public class EnterOtpActivity extends AppCompatActivity {
                     if (stringBuffer_order.length()!=0){
 
                         JSONArray jsonArray_orders = new JSONArray(stringBuffer_order.toString());
-                        Log.d("Sidd",jsonArray.length()+"");
-                        for (int i = 0; i < jsonArray.length(); i++) {
+                        Log.d("Sidd",jsonArray_orders.length()+"");
+                        for (int i = 0; i < jsonArray_orders.length(); i++) {
                             JSONObject object = new JSONObject(jsonArray_orders.get(i).toString());
                             Gson gson = new Gson();
                             OrderModel orderModel= gson.fromJson(object.toString(),OrderModel.class);
