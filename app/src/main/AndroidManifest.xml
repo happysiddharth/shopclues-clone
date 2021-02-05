@@ -11,11 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Shopcluesclone">
-        <activity android:name=".activities.SignUpActivity"></activity>
+        <activity android:name=".activities.AccountsActivity"></activity>
+        <activity android:name=".activities.SignUpActivity" />
         <activity android:name=".activities.OffersActivity" />
         <activity android:name=".activities.GoogleLoginActivity" />
         <activity android:name=".activities.MainActivity" />
-        <activity android:name=".activities.AccountsActivity">
+        <activity android:name=".activities.CategoriesActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

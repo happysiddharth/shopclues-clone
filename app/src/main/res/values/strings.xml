@@ -29,4 +29,7 @@
     <string name="enter_your_email_id">Enter your email ID</string>
     <string name="enter_your_mobile_number">Enter your mobile number</string>
     <string name="enter_your_password">Enter your password</string>
+    <string name="cases_covers"><![CDATA[Cases & Covers]]></string>
+    <string name="food_beverage"><![CDATA[Food & Beverage]]></string>
+    <string name="fitness_exercise"><![CDATA[Fitness & Exercise]]></string>
 </resources>

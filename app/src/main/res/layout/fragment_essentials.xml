@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".fragments.EssentialsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvDailyNeeds"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10.1"
+            android:background="@color/faded_white"
+            android:padding="@dimen/dp_10.1"
+            android:text="Daily Needs"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_16.1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivFoods"
+            android:layout_width="65dp"
+            android:layout_height="90dp"
+            android:layout_margin="@dimen/dp_15.1"
+            android:src="@drawable/foods"
+            app:layout_constraintEnd_toStartOf="@id/ivGroceries"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDailyNeeds" />
+
+        <TextView
+            android:id="@+id/tvFoods"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_7.1"
+            android:text="@string/food_beverage"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@id/ivFoods"
+            app:layout_constraintStart_toStartOf="@id/ivFoods"
+            app:layout_constraintTop_toBottomOf="@id/ivFoods" />
+
+        <ImageView
+            android:id="@+id/ivGroceries"
+            android:layout_width="65dp"
+            android:layout_height="90dp"
+            android:layout_margin="@dimen/dp_15.1"
+            android:src="@drawable/grocery"
+            app:layout_constraintEnd_toStartOf="@id/ivHousehold"
+            app:layout_constraintStart_toEndOf="@id/ivFoods"
+            app:layout_constraintTop_toBottomOf="@id/tvDailyNeeds" />
+
+        <TextView
+            android:id="@+id/tvTablets"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_7.1"
+            android:text="Groceries"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@id/ivGroceries"
+            app:layout_constraintStart_toStartOf="@id/ivGroceries"
+            app:layout_constraintTop_toBottomOf="@id/ivGroceries" />
+
+        <ImageView
+            android:id="@+id/ivHousehold"
+            android:layout_width="65dp"
+            android:layout_height="90dp"
+            android:layout_margin="@dimen/dp_15.1"
+            android:src="@drawable/household"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivGroceries"
+            app:layout_constraintTop_toBottomOf="@id/tvDailyNeeds" />
+
+        <TextView
+            android:id="@+id/tvHouseHold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_7.1"
+            android:text="Household supplies"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@id/ivHousehold"
+            app:layout_constraintStart_toStartOf="@id/ivHousehold"
+            app:layout_constraintTop_toBottomOf="@id/ivHousehold" />
+
+        <TextView
+            android:id="@+id/tvPersonalCare"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10.1"
+            android:layout_marginTop="@dimen/dp_15.1"
+            android:background="@color/faded_white"
+            android:padding="@dimen/dp_10.1"
+            android:text="Personal Care"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_16.1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvFoods" />
+
+        <ImageView
+            android:id="@+id/ivGrooming"
+            android:layout_width="65dp"
+            android:layout_height="90dp"
+            android:layout_margin="@dimen/dp_15.1"
+            android:src="@drawable/grooming"
+            app:layout_constraintEnd_toStartOf="@id/ivGroceries"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvPersonalCare" />
+
+        <TextView
+            android:id="@+id/tvGrooming"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_7.1"
+            android:text="Grooming"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@id/ivGrooming"
+            app:layout_constraintStart_toStartOf="@id/ivGrooming"
+            app:layout_constraintTop_toBottomOf="@id/ivGrooming" />
+
+        <ImageView
+            android:id="@+id/ivHygiene"
+            android:layout_width="65dp"
+            android:layout_height="90dp"
+            android:layout_margin="@dimen/dp_15.1"
+            android:src="@drawable/hygiene"
+            app:layout_constraintEnd_toStartOf="@id/ivHousehold"
+            app:layout_constraintStart_toEndOf="@id/ivFoods"
+            app:layout_constraintTop_toBottomOf="@id/tvPersonalCare" />
+
+        <TextView
+            android:id="@+id/tvHygiene"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_7.1"
+            android:text="Hygiene"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@id/ivHygiene"
+            app:layout_constraintStart_toStartOf="@id/ivHygiene"
+            app:layout_constraintTop_toBottomOf="@id/ivHygiene" />
+
+        <ImageView
+            android:id="@+id/ivOralCare"
+            android:layout_width="65dp"
+            android:layout_height="90dp"
+            android:layout_margin="@dimen/dp_15.1"
+            android:src="@drawable/oral_care"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivGroceries"
+            app:layout_constraintTop_toBottomOf="@id/tvPersonalCare" />
+
+        <TextView
+            android:id="@+id/tvOralCare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_7.1"
+            android:text="Oral Care"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@id/ivOralCare"
+            app:layout_constraintStart_toStartOf="@id/ivOralCare"
+            app:layout_constraintTop_toBottomOf="@id/ivOralCare" />
+
+        <TextView
+            android:id="@+id/tvFitness"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10.1"
+            android:layout_marginTop="@dimen/dp_15.1"
+            android:background="@color/faded_white"
+            android:padding="@dimen/dp_10.1"
+            android:text="@string/fitness_exercise"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_16.1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvGrooming" />
+
+        <ImageView
+            android:id="@+id/ivGymAppliances"
+            android:layout_width="65dp"
+            android:layout_height="90dp"
+            android:layout_margin="@dimen/dp_15.1"
+            android:src="@drawable/gym_appliances"
+            app:layout_constraintEnd_toStartOf="@id/ivGroceries"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvFitness" />
+
+        <TextView
+            android:id="@+id/tvGymAppliances"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_7.1"
+            android:text="Gym Appliances"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@id/ivGymAppliances"
+            app:layout_constraintStart_toStartOf="@id/ivGymAppliances"
+            app:layout_constraintTop_toBottomOf="@id/ivGymAppliances" />
+
+        <ImageView
+            android:id="@+id/ivGloves"
+            android:layout_width="65dp"
+            android:layout_height="90dp"
+            android:layout_margin="@dimen/dp_15.1"
+            android:src="@drawable/gloves"
+            app:layout_constraintEnd_toStartOf="@id/ivHousehold"
+            app:layout_constraintStart_toEndOf="@id/ivFoods"
+            app:layout_constraintTop_toBottomOf="@id/tvFitness" />
+
+        <TextView
+            android:id="@+id/tvGloves"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_7.1"
+            android:text="Gloves"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@id/ivGloves"
+            app:layout_constraintStart_toStartOf="@id/ivGloves"
+            app:layout_constraintTop_toBottomOf="@id/ivGloves" />
+
+        <ImageView
+            android:id="@+id/ivSupplements"
+            android:layout_width="65dp"
+            android:layout_height="90dp"
+            android:layout_margin="@dimen/dp_15.1"
+            android:src="@drawable/supplements"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivGroceries"
+            app:layout_constraintTop_toBottomOf="@id/tvFitness" />
+
+        <TextView
+            android:id="@+id/tvSupplements"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_7.1"
+            android:text="Supplements"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@id/ivSupplements"
+            app:layout_constraintStart_toStartOf="@id/ivSupplements"
+            app:layout_constraintTop_toBottomOf="@id/ivSupplements" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
