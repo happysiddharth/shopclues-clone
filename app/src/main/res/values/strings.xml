@@ -2,6 +2,7 @@
     <string name="app_name">shopclues-clone</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
     <string name="my_orders">My Orders</string>
     <string name="wishlist">Wishlist</string>
     <string name="vip_club">VIP Club</string>
@@ -15,6 +16,7 @@
     <string name="legal">Legal</string>
     <string name="more">More</string>
     <string name="my_profile">My Profile</string>
+
     <string name="hi_guest">Hi Guest!</string>
     <string name="sign_in_or_create_new_account_to_manage_your_orders">Sign in or Create New Account to Manage Your Orders</string>
     <string name="sign_up">Sign up</string>
@@ -29,4 +31,9 @@
     <string name="enter_your_email_id">Enter your email ID</string>
     <string name="enter_your_mobile_number">Enter your mobile number</string>
     <string name="enter_your_password">Enter your password</string>
+    <string name="cases_covers"><![CDATA[Cases & Covers]]></string>
+    <string name="food_beverage"><![CDATA[Food & Beverage]]></string>
+    <string name="fitness_exercise"><![CDATA[Fitness & Exercise]]></string>
+
+
 </resources>

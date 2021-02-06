@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".fragments.WomenFashionFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvClothing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10.1"
+            android:background="@color/faded_white"
+            android:padding="@dimen/dp_10.1"
+            android:text="Clothing"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_16.1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivSaree"
+            android:layout_width="65dp"
+            android:layout_height="90dp"
+            android:layout_margin="@dimen/dp_15.1"
+            android:scaleType="centerCrop"
+            android:src="@drawable/saree"
+            app:layout_constraintEnd_toStartOf="@id/ivSalwar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvClothing" />
+
+        <TextView
+            android:id="@+id/tvSaree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_7.1"
+            android:text="Saree"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@id/ivSaree"
+            app:layout_constraintStart_toStartOf="@id/ivSaree"
+            app:layout_constraintTop_toBottomOf="@id/ivSaree" />
+
+        <ImageView
+            android:id="@+id/ivSalwar"
+            android:layout_width="65dp"
+            android:layout_height="90dp"
+            android:layout_margin="@dimen/dp_15.1"
+            android:layout_marginTop="16dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/salwar"
+            app:layout_constraintEnd_toStartOf="@id/ivSaree"
+            app:layout_constraintStart_toEndOf="@id/ivTops"
+            app:layout_constraintTop_toBottomOf="@id/tvClothing" />
+
+        <TextView
+            android:id="@+id/tvSalwar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_7.1"
+            android:text="Salwar"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@id/ivSalwar"
+            app:layout_constraintStart_toStartOf="@id/ivSalwar"
+            app:layout_constraintTop_toBottomOf="@id/ivSalwar" />
+
+        <ImageView
+            android:id="@+id/ivTops"
+            android:layout_width="65dp"
+            android:layout_height="90dp"
+            android:layout_margin="@dimen/dp_15.1"
+            android:scaleType="centerCrop"
+            android:src="@drawable/tops"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivSalwar"
+            app:layout_constraintTop_toBottomOf="@id/tvClothing" />
+
+        <TextView
+            android:id="@+id/tvTops"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_7.1"
+            android:text="Tops"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@id/ivTops"
+            app:layout_constraintStart_toStartOf="@id/ivTops"
+            app:layout_constraintTop_toBottomOf="@id/ivTops" />
+
+        <TextView
+            android:id="@+id/tvJewellery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10.1"
+            android:layout_marginTop="@dimen/dp_15.1"
+            android:background="@color/faded_white"
+            android:padding="@dimen/dp_10.1"
+            android:text="Jewellery"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_16.1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvSaree" />
+
+        <ImageView
+            android:id="@+id/ivPendants"
+            android:layout_width="65dp"
+            android:layout_height="90dp"
+            android:layout_margin="@dimen/dp_15.1"
+            android:scaleType="centerCrop"
+            android:src="@drawable/pendants"
+            app:layout_constraintEnd_toStartOf="@id/ivSalwar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvJewellery" />
+
+        <TextView
+            android:id="@+id/tvPendants"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_7.1"
+            android:text="Pendants"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@id/ivPendants"
+            app:layout_constraintStart_toStartOf="@id/ivPendants"
+            app:layout_constraintTop_toBottomOf="@id/ivPendants" />
+
+        <ImageView
+            android:id="@+id/ivMangalSutra"
+            android:layout_width="65dp"
+            android:layout_height="90dp"
+            android:layout_margin="@dimen/dp_15.1"
+            android:layout_marginTop="16dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/mangalsutra"
+            app:layout_constraintEnd_toStartOf="@id/ivSaree"
+            app:layout_constraintStart_toEndOf="@id/ivTops"
+            app:layout_constraintTop_toBottomOf="@id/tvJewellery" />
+
+        <TextView
+            android:id="@+id/tvMangalSutra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_7.1"
+            android:text="Mangalsutra"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@id/ivMangalSutra"
+            app:layout_constraintStart_toStartOf="@id/ivMangalSutra"
+            app:layout_constraintTop_toBottomOf="@id/ivMangalSutra" />
+
+        <ImageView
+            android:id="@+id/ivWatches"
+            android:layout_width="65dp"
+            android:layout_height="90dp"
+            android:layout_margin="@dimen/dp_15.1"
+            android:scaleType="centerCrop"
+            android:src="@drawable/watches_women"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivSalwar"
+            app:layout_constraintTop_toBottomOf="@id/tvJewellery" />
+
+        <TextView
+            android:id="@+id/tvWatches"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_7.1"
+            android:text="Watches"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@id/ivWatches"
+            app:layout_constraintStart_toStartOf="@id/ivWatches"
+            app:layout_constraintTop_toBottomOf="@id/ivWatches" />
+
+        <TextView
+            android:id="@+id/tvBeauty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10.1"
+            android:layout_marginTop="@dimen/dp_15.1"
+            android:background="@color/faded_white"
+            android:padding="@dimen/dp_10.1"
+            android:text="Beauty"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_16.1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvPendants" />
+
+        <ImageView
+            android:id="@+id/ivMakeUp"
+            android:layout_width="65dp"
+            android:layout_height="90dp"
+            android:layout_margin="@dimen/dp_15.1"
+            android:scaleType="centerCrop"
+            android:src="@drawable/makeup"
+            app:layout_constraintEnd_toStartOf="@id/ivSalwar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvBeauty" />
+
+        <TextView
+            android:id="@+id/tvMakeUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_7.1"
+            android:text="Makeup"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@id/ivMakeUp"
+            app:layout_constraintStart_toStartOf="@id/ivMakeUp"
+            app:layout_constraintTop_toBottomOf="@id/ivMakeUp" />
+
+        <ImageView
+            android:id="@+id/ivFragrances"
+            android:layout_width="65dp"
+            android:layout_height="90dp"
+            android:layout_margin="@dimen/dp_15.1"
+            android:layout_marginTop="16dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/fragrances"
+            app:layout_constraintEnd_toStartOf="@id/ivSaree"
+            app:layout_constraintStart_toEndOf="@id/ivTops"
+            app:layout_constraintTop_toBottomOf="@id/tvBeauty" />
+
+        <TextView
+            android:id="@+id/tvFragrances"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_7.1"
+            android:text="Fragrances"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@id/ivFragrances"
+            app:layout_constraintStart_toStartOf="@id/ivFragrances"
+            app:layout_constraintTop_toBottomOf="@id/ivFragrances" />
+
+        <ImageView
+            android:id="@+id/ivAppliances"
+            android:layout_width="65dp"
+            android:layout_height="90dp"
+            android:layout_margin="@dimen/dp_15.1"
+            android:scaleType="centerCrop"
+            android:src="@drawable/appliances"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivSalwar"
+            app:layout_constraintTop_toBottomOf="@id/tvBeauty" />
+
+        <TextView
+            android:id="@+id/tvAppliances"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_7.1"
+            android:text="Appliances"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@id/ivAppliances"
+            app:layout_constraintStart_toStartOf="@id/ivAppliances"
+            app:layout_constraintTop_toBottomOf="@id/ivAppliances" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

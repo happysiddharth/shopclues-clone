@@ -22,6 +22,8 @@ import android.widget.FrameLayout;
 
 
 import com.example.shopclues_clone.fragments.AccountFragement;
+import com.example.shopclues_clone.R;
+import com.example.shopclues_clone.fragments.CategoriesFragment;
 import com.example.shopclues_clone.fragments.HomescreenFragment;
 import com.example.shopclues_clone.fragments.ProductsFragment;
 import com.example.shopclues_clone.fragments.TestingFragment;
@@ -30,7 +32,6 @@ import com.example.shopclues_clone.models.CartItemModel;
 import com.example.shopclues_clone.models.ProductResponse;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
-import com.example.shopclues_clone.R;
 
 import java.io.File;
 
@@ -47,8 +48,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 
+
 public class MainActivity extends AppCompatActivity implements BottomNavigationToggle {
-    private FrameLayout frameLayout ;
+    private FrameLayout frameLayout;
     private NavigationView navDrawer;
     private Button gotocart,search_btn;
     private EditText search_text;
@@ -58,34 +60,36 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationT
     private Runnable runnable = new Runnable() {
         @Override
         public void run() {
-            Log.d("Sidd","run");
+            Log.d("Sidd", "run");
             try {
                 File folder = new File(getFilesDir()+ File.separator,"data");
-                if (!folder.exists()){
+                if (!folder.exists()) {
                     folder.mkdir();
                 }
-                File file = new File(folder,"cart.txt");
-                if (!file.exists()){
+                File file = new File(folder, "cart.txt");
+                if (!file.exists()) {
                     file.createNewFile();
                 }
 
                 FileInputStream inputStream = new FileInputStream(file);
-                InputStreamReader inputStreamReader =new InputStreamReader(inputStream);
+                InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
                 int data = inputStreamReader.read();
                 StringBuffer stringBuffer = new StringBuffer();
-                while(data!=-1){
-                    char c = (char)data;
+                while (data != -1) {
+                    char c = (char) data;
                     stringBuffer.append(c);
                     data = inputStreamReader.read();
                 }
                 JSONArray jsonArray = new JSONArray(stringBuffer.toString());
                 List<CartItemModel> list = new ArrayList<>();
 
-                for (int i=0;i<jsonArray.length();i++){
+                for (int i = 0; i < jsonArray.length(); i++) {
                     JSONObject jsonObject = new JSONObject(jsonArray.get(i).toString());
 
 
-                    list.add(new CartItemModel(jsonObject.get("id").toString(),1,"",jsonObject.get("title").toString(),jsonObject.get("image").toString(),jsonObject.get("price").toString(),jsonObject.get("cart_id").toString()));
+                    list.add(new CartItemModel(jsonObject.get("id").toString(), 1, "",
+                            jsonObject.get("title").toString(), jsonObject.get("image").toString(),
+                            jsonObject.get("price").toString(), jsonObject.get("cart_id").toString()));
                     //Map<Integer,CartItemModel> item = new HashMap<>();
 //                    response.put(Integer.parseInt(jsonObject.get("id").toString()), item);
                 }
@@ -93,15 +97,16 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationT
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        gotocart.setText(list.size()+"");
+                        gotocart.setText(list.size() + "");
                     }
                 });
-            }catch (Exception r){
+            } catch (Exception r) {
 
             }
 
         }
     };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -121,7 +126,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationT
     private void setHomescreenFragment() {
         FragmentTransaction homepageTransaction = fragmentManager.beginTransaction();
         HomescreenFragment homescreenFragment = new HomescreenFragment(this);
-        homepageTransaction.add(R.id.homescreenFrameLayout,homescreenFragment,"homepage").commit();
+        homepageTransaction.add(R.id.homescreenFrameLayout, homescreenFragment, "homepage").commit();
     }
 
     private void init() {
@@ -175,16 +180,17 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationT
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()){
+                switch (item.getItemId()) {
                     case R.id.action_account:
 
                         setFrameLayout(new AccountFragement());
                        break;
+
                     case R.id.action_recents:
-                        Log.d("Sidd","home");
+                        Log.d("Sidd", "home");
                         FragmentTransaction homepageTransaction = fragmentManager.beginTransaction();
                         HomescreenFragment homescreenFragment = new HomescreenFragment(MainActivity.this);
-                        homepageTransaction.replace(R.id.homescreenFrameLayout,homescreenFragment,"homepage").commit();
+                        homepageTransaction.replace(R.id.homescreenFrameLayout, homescreenFragment, "homepage").commit();
 
 //                        FragmentTransaction homepageTransaction = fragmentManager.beginTransaction();
 //                        HomescreenFragment homescreenFragment = new HomescreenFragment(MainActivity.this);
@@ -198,15 +204,15 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationT
                                     InputStream stream = getAssets().open("product.json");
                                     StringBuffer stringBuffer = new StringBuffer();
                                     int data = stream.read();
-                                    while (data!=-1){
-                                        char c = (char)data;
+                                    while (data != -1) {
+                                        char c = (char) data;
                                         data = stream.read();
                                         stringBuffer.append(c);
                                     }
                                     JSONArray jsonArray = new JSONArray(stringBuffer.toString());
-                                    Log.d("Sidd",jsonArray.length()+"");
+                                    Log.d("Sidd", jsonArray.length() + "");
                                     List<ProductResponse> list = new ArrayList<>();
-                                    for (int i=0;i<jsonArray.length();i++){
+                                    for (int i = 0; i < jsonArray.length(); i++) {
                                         JSONObject jsonObject = jsonArray.getJSONObject(i);
                                         ProductResponse response = new ProductResponse();
                                         // "id": 2,
@@ -223,16 +229,17 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationT
                                         response.setId(Integer.parseInt(jsonObject.get("id").toString()));
                                         list.add(response);
                                     }
-                                    Log.d("SIdd",list.size()+" list");
+                                    Log.d("SIdd", list.size() + " list");
                                     runOnUiThread(new Runnable() {
                                         @Override
                                         public void run() {
                                             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                                             ProductsFragment productsFragment = new ProductsFragment(list);
+                                            ProductsFragment productsFragment = new ProductsFragment(list);
                                             fragmentTransaction
-                                                    .replace(R.id.homescreenFrameLayout,productsFragment,"id")
+                                                    .replace(R.id.homescreenFrameLayout, productsFragment, "id")
                                                     .addToBackStack("random")
-                                                    .commit();   }
+                                                    .commit();
+                                        }
                                     });
 
                                 } catch (IOException | JSONException e) {
@@ -242,15 +249,19 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationT
                         });
                         thread.start();
                         break;
+                    case R.id.action_favorites:
+                        setFrameLayout(new CategoriesFragment());
+                        break;
                 }
                 return true;
             }
         });
     }
-    void setFrameLayout(Fragment frameLayout){
+
+    void setFrameLayout(Fragment frameLayout) {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction
-                .replace(R.id.homescreenFrameLayout,frameLayout,"id")
+                .replace(R.id.homescreenFrameLayout, frameLayout, "id")
                 .addToBackStack("random")
                 .commit();
     }

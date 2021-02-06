@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".fragments.KidsFashionFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvClothing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10.1"
+            android:background="@color/faded_white"
+            android:padding="@dimen/dp_10.1"
+            android:text="Clothing"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_16.1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivBoysFashion"
+            android:layout_width="65dp"
+            android:layout_height="90dp"
+            android:layout_margin="@dimen/dp_15.1"
+            android:src="@drawable/boys_fashion"
+            app:layout_constraintEnd_toStartOf="@id/ivJeans"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvClothing" />
+
+        <TextView
+            android:id="@+id/tvBoysFashion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_7.1"
+            android:text="Boy's Fashion"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@id/ivBoysFashion"
+            app:layout_constraintStart_toStartOf="@id/ivBoysFashion"
+            app:layout_constraintTop_toBottomOf="@id/ivBoysFashion" />
+
+        <ImageView
+            android:id="@+id/ivGirlsFashion"
+            android:layout_width="65dp"
+            android:layout_height="90dp"
+            android:layout_margin="@dimen/dp_15.1"
+            android:src="@drawable/girls_fashion"
+            app:layout_constraintEnd_toStartOf="@id/ivInfantsFashion"
+            app:layout_constraintStart_toEndOf="@id/ivBoysFashion"
+            app:layout_constraintTop_toBottomOf="@id/tvClothing" />
+
+        <TextView
+            android:id="@+id/tvGirlsFashion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_7.1"
+            android:text="Girl's Fashion"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@id/ivGirlsFashion"
+            app:layout_constraintStart_toStartOf="@id/ivGirlsFashion"
+            app:layout_constraintTop_toBottomOf="@id/ivGirlsFashion" />
+
+        <ImageView
+            android:id="@+id/ivInfantsFashion"
+            android:layout_width="65dp"
+            android:layout_height="90dp"
+            android:layout_margin="@dimen/dp_15.1"
+            android:src="@drawable/infants_fashion"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivGirlsFashion"
+            app:layout_constraintTop_toBottomOf="@id/tvClothing" />
+
+        <TextView
+            android:id="@+id/tvJackets"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_7.1"
+            android:text="Infants Fashion"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@id/ivInfantsFashion"
+            app:layout_constraintStart_toStartOf="@id/ivInfantsFashion"
+            app:layout_constraintTop_toBottomOf="@id/ivInfantsFashion" />
+
+        <TextView
+            android:id="@+id/tvKidsWatches"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10.1"
+            android:layout_marginTop="@dimen/dp_15.1"
+            android:background="@color/faded_white"
+            android:padding="@dimen/dp_10.1"
+            android:text="Kid's Watches"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_16.1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvBoysFashion" />
+
+        <ImageView
+            android:id="@+id/ivCartoonWatch"
+            android:layout_width="65dp"
+            android:layout_height="90dp"
+            android:layout_margin="@dimen/dp_15.1"
+            android:src="@drawable/cartoon_watch"
+            app:layout_constraintEnd_toStartOf="@id/ivDigitalWatch"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvKidsWatches" />
+
+        <TextView
+            android:id="@+id/tvCartoonWatch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_7.1"
+            android:text="Cartoon Watch"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@id/ivCartoonWatch"
+            app:layout_constraintStart_toStartOf="@id/ivCartoonWatch"
+            app:layout_constraintTop_toBottomOf="@id/ivCartoonWatch" />
+
+        <ImageView
+            android:id="@+id/ivDigitalWatch"
+            android:layout_width="65dp"
+            android:layout_height="90dp"
+            android:layout_margin="@dimen/dp_15.1"
+            android:src="@drawable/digital_watch"
+            app:layout_constraintEnd_toStartOf="@id/ivInfantsFashion"
+            app:layout_constraintStart_toEndOf="@id/ivBoysFashion"
+            app:layout_constraintTop_toBottomOf="@id/tvKidsWatches" />
+
+        <TextView
+            android:id="@+id/tvDigitalWatch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_7.1"
+            android:text="Digital Watch"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@id/ivDigitalWatch"
+            app:layout_constraintStart_toStartOf="@id/ivDigitalWatch"
+            app:layout_constraintTop_toBottomOf="@id/ivDigitalWatch" />
+
+        <ImageView
+            android:id="@+id/ivSchoolWatch"
+            android:layout_width="65dp"
+            android:layout_height="90dp"
+            android:layout_margin="@dimen/dp_15.1"
+            android:src="@drawable/school_watch"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivGirlsFashion"
+            app:layout_constraintTop_toBottomOf="@id/tvKidsWatches" />
+
+        <TextView
+            android:id="@+id/tvSchoolWatch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_7.1"
+            android:text="School Watch"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@id/ivSchoolWatch"
+            app:layout_constraintStart_toStartOf="@id/ivSchoolWatch"
+            app:layout_constraintTop_toBottomOf="@id/ivSchoolWatch" />
+
+        <TextView
+            android:id="@+id/tvKidsGames"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10.1"
+            android:layout_marginTop="@dimen/dp_15.1"
+            android:background="@color/faded_white"
+            android:padding="@dimen/dp_10.1"
+            android:text="Kid's Games"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_16.1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvCartoonWatch" />
+
+        <ImageView
+            android:id="@+id/ivEducationalToys"
+            android:layout_width="65dp"
+            android:layout_height="90dp"
+            android:layout_margin="@dimen/dp_15.1"
+            android:src="@drawable/educational_toys"
+            app:layout_constraintEnd_toStartOf="@id/ivDigitalWatch"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvKidsGames" />
+
+        <TextView
+            android:id="@+id/tvEducationalToys"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_7.1"
+            android:text="Educational Toys"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@id/ivEducationalToys"
+            app:layout_constraintStart_toStartOf="@id/ivEducationalToys"
+            app:layout_constraintTop_toBottomOf="@id/ivEducationalToys" />
+
+        <ImageView
+            android:id="@+id/ivDevices"
+            android:layout_width="65dp"
+            android:layout_height="90dp"
+            android:layout_margin="@dimen/dp_15.1"
+            android:src="@drawable/laptops_tablets"
+            app:layout_constraintEnd_toStartOf="@id/ivInfantsFashion"
+            app:layout_constraintStart_toEndOf="@id/ivBoysFashion"
+            app:layout_constraintTop_toBottomOf="@id/tvKidsGames" />
+
+        <TextView
+            android:id="@+id/tvDevices"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_7.1"
+            android:text="Kids Devices"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@id/ivDevices"
+            app:layout_constraintStart_toStartOf="@id/ivDevices"
+            app:layout_constraintTop_toBottomOf="@id/ivDevices" />
+
+        <ImageView
+            android:id="@+id/ivRideOnes"
+            android:layout_width="65dp"
+            android:layout_height="90dp"
+            android:layout_margin="@dimen/dp_15.1"
+            android:src="@drawable/ride_toys"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivGirlsFashion"
+            app:layout_constraintTop_toBottomOf="@id/tvKidsGames" />
+
+        <TextView
+            android:id="@+id/tvRideOnes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_7.1"
+            android:text="Ride Ones"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@id/ivRideOnes"
+            app:layout_constraintStart_toStartOf="@id/ivRideOnes"
+            app:layout_constraintTop_toBottomOf="@id/ivRideOnes" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
