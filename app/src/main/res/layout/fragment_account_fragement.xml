@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/flWholeContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+  >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/tvMyOrders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_15.1"
+            android:drawablePadding="@dimen/sp_16.1"
+            android:paddingLeft="@dimen/dp_15.1"
+            android:text="@string/my_orders"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_16.1"
+            app:drawableLeftCompat="@drawable/my_order" />
+
+        <TextView
+            android:id="@+id/tvWishList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_15.1"
+            android:drawablePadding="@dimen/dp_20.1"
+            android:paddingLeft="@dimen/dp_15.1"
+            android:text="@string/wishlist"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_16.1"
+            app:drawableLeftCompat="@drawable/wish_list" />
+
+        <TextView
+            android:id="@+id/tvVipClub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_15.1"
+            android:drawablePadding="@dimen/dp_20.1"
+            android:paddingLeft="@dimen/dp_15.1"
+            android:text="@string/vip_club"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_16.1"
+            app:drawableLeftCompat="@drawable/vip_club" />
+
+        <TextView
+            android:id="@+id/tvMyGoodyBag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_15.1"
+            android:drawablePadding="@dimen/dp_20.1"
+            android:paddingLeft="@dimen/dp_15.1"
+            android:text="@string/my_goodybag"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_16.1"
+            app:drawableLeftCompat="@drawable/my_goody_bag" />
+
+        <TextView
+            android:id="@+id/tvMyCluesBucks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_15.1"
+            android:drawablePadding="@dimen/dp_20.1"
+            android:paddingLeft="@dimen/dp_15.1"
+            android:text="@string/my_cluesbucks"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_16.1"
+            app:drawableLeftCompat="@drawable/my_clues_bucks" />
+
+        <TextView
+            android:id="@+id/tvReferAndEarn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_15.1"
+            android:drawablePadding="@dimen/dp_20.1"
+            android:paddingLeft="@dimen/dp_15.1"
+            android:text="@string/refer_earn"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_16.1"
+            app:drawableLeftCompat="@drawable/refer_and_earn" />
+
+        <TextView
+            android:id="@+id/tvMyProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_15.1"
+            android:drawablePadding="@dimen/dp_20.1"
+            android:paddingLeft="@dimen/dp_15.1"
+            android:text="@string/my_profile"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_16.1"
+            app:drawableLeftCompat="@drawable/my_profile" />
+
+        <TextView
+            android:id="@+id/tvLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_15.1"
+            android:drawablePadding="@dimen/dp_20.1"
+            android:paddingLeft="@dimen/dp_15.1"
+            android:text="@string/location"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_16.1"
+            app:drawableLeftCompat="@drawable/location" />
+
+        <TextView
+            android:id="@+id/tvRateYourPurchase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_15.1"
+            android:drawablePadding="@dimen/dp_20.1"
+            android:paddingLeft="@dimen/dp_15.1"
+            android:text="@string/rate_your_purchase"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_16.1"
+            app:drawableLeftCompat="@drawable/rate_your_purchase" />
+
+        <TextView
+            android:id="@+id/tvHelpAndSupport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_15.1"
+            android:drawablePadding="@dimen/dp_20.1"
+            android:paddingLeft="@dimen/dp_15.1"
+            android:text="@string/help_support"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_16.1"
+            app:drawableLeftCompat="@drawable/help_and_support" />
+
+        <TextView
+            android:id="@+id/tvRateTheApp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_15.1"
+            android:drawablePadding="@dimen/dp_20.1"
+            android:paddingLeft="@dimen/dp_15.1"
+            android:text="@string/rate_the_app"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_16.1"
+            app:drawableLeftCompat="@drawable/rate_the_app" />
+
+        <TextView
+            android:id="@+id/tvLegal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_15.1"
+            android:drawablePadding="@dimen/dp_20.1"
+            android:paddingLeft="@dimen/dp_15.1"
+            android:text="@string/legal"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_16.1"
+            app:drawableLeftCompat="@drawable/legal" />
+
+        <TextView
+            android:id="@+id/tvMore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_15.1"
+            android:drawablePadding="@dimen/dp_20.1"
+            android:paddingLeft="@dimen/dp_15.1"
+            android:text="@string/more"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_16.1"
+            app:drawableLeftCompat="@drawable/more" />
+
+    </LinearLayout>
+
+</ScrollView>

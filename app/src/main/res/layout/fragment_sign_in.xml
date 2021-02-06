@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".fragments.SignInFragment">
+
+    <EditText
+        android:id="@+id/etEnterEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_15.1"
+        android:hint="@string/enter_your_mobile_number_or_email_id"
+        android:paddingTop="@dimen/dp_20.1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etEnterEmail">
+
+        <Button
+            android:id="@+id/LoginViaOTP"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_15.1"
+            android:layout_weight="1"
+            android:background="@color/neon_orange"
+            android:paddingTop="@dimen/dp_7.1"
+            android:paddingBottom="@dimen/dp_7.1"
+            android:text="@string/login_via_otp"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/LoginViaPassword"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_15.1"
+            android:layout_weight="1"
+            android:background="@drawable/rectangle_bg_login"
+            android:paddingTop="@dimen/dp_7.1"
+            android:paddingBottom="@dimen/dp_7.1"
+            android:text="@string/login_via_password"
+            android:textAllCaps="false"
+            android:textColor="@color/neon_orange" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvRegisterNow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_15.1"
+        android:text="@string/don_t_have_an_account_register_now"
+        android:textColor="@color/custom_grey"
+        app:layout_constraintBottom_toTopOf="@id/tvLoginWith"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvLoginWith"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login_with"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/btnBelow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/btnBelow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_15.1"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/LoginWithFacebook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:drawableTop="@drawable/ic_facebook"
+                android:padding="@dimen/dp_7.1"
+                android:text="@string/facebook"
+                android:textAllCaps="false"
+                android:textColor="@color/dim_grey" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_15.1"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/LoginWithTrueCaller"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:drawableTop="@drawable/true_caller"
+                android:padding="@dimen/dp_7.1"
+                android:text="@string/truecaller"
+                android:textAllCaps="false"
+                android:textColor="@color/dim_grey" />
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
